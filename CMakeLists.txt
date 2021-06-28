@@ -302,8 +302,8 @@ configure_file(
   @ONLY)
 
 if(JAEGERTRACING_BUILD_EXAMPLES)
-  add_executable(app examples/App.cpp)
-  target_link_libraries(app PUBLIC ${JAEGERTRACING_LIB})
+  add_executable(tracing-demo demo/demo.cpp)
+  target_link_libraries(tracing-demo PUBLIC ${JAEGERTRACING_LIB})
 endif()
 
 if(BUILD_TESTING)
