@@ -46,3 +46,6 @@
 # CLion folders
 cmake-build-debug
 .idea
+
+#vscode folder
+.vscode/

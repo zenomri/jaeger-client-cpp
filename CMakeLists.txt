@@ -302,8 +302,14 @@ configure_file(
   @ONLY)
 
 if(JAEGERTRACING_BUILD_EXAMPLES)
-  add_executable(tracing-demo demo/demo.cpp)
-  target_link_libraries(tracing-demo PUBLIC ${JAEGERTRACING_LIB})
+  add_executable(singletonTracer demo/singletonTracer.cpp)
+  target_link_libraries(singletonTracer PUBLIC ${JAEGERTRACING_LIB})
+
+  add_executable(multilpleTracers demo/tracer_per_thread.cpp)
+  target_link_libraries(multilpleTracers PUBLIC ${JAEGERTRACING_LIB})
+
+  add_executable(disableTracer demo/disableTracer.cpp )
+  target_link_libraries(disableTracer PUBLIC ${JAEGERTRACING_LIB})
 endif()
 
 if(BUILD_TESTING)

@@ -2,7 +2,7 @@ disabled: false
 reporter:
     logSpans: true
     localAgentHostPort: 127.0.0.1:6831
-    queueSize: 100
+    queueSize: 300
 sampler:
   type: const
   param: 1
