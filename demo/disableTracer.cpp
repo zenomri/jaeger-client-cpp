@@ -27,8 +27,7 @@ void tracedSubFunction(
 void tracedFunction(string trace_name){
 
   //init Tracer
-  string config_file = "../demo/config.yml";
-  TracerWrapper t_wrapper(config_file);
+  TracerWrapper t_wrapper("serviceName");
 
   //Start Span
   auto span = t_wrapper.StartSpan(trace_name);
